@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     duration: 1500,
   });
+
+  $(".menuOpen").click(function () {
+    $(this).toggleClass("on");
+    $(".header .right").toggleClass("on");
+  });
+
   $(".dropdown .drop").click(function () {
     $(this).parent().toggleClass("on");
   });
@@ -74,6 +80,5 @@ function scrollFn() {
     if (isScrollTop === 0) {
       $(".header").removeClass("scrollDown");
     }
-    console.log(isScrollTop);
   });
 }

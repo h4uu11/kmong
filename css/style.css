@@ -92,6 +92,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: fixed;
+  top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -143,6 +144,64 @@ button {
   margin-left: 42px;
 }
 
+.header .menuOpen {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.header .menuOpen.on span {
+  background-color: #333;
+}
+
+.header .menuOpen.on span:nth-child(1) {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.header .menuOpen.on span:nth-child(2) {
+  display: none;
+}
+
+.header .menuOpen.on span:nth-child(3) {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.header .menuOpen span {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header .menuOpen span:nth-child(1) {
+  top: 0;
+}
+
+.header .menuOpen span:nth-child(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.header .menuOpen span:nth-child(3) {
+  bottom: 0;
+}
+
 .footer {
   padding-top: 70px;
   padding-bottom: 90px;
@@ -160,6 +219,13 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 1280px) {
+  .footer .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .footer .inner .tx2 {
@@ -184,6 +250,13 @@ button {
   width: 100%;
   margin: 0 auto;
   padding-top: 200px;
+}
+
+@media (max-width: 1280px) {
+  .notice {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .notice .title {
@@ -267,6 +340,13 @@ button {
   padding-bottom: 670px;
 }
 
+@media (max-width: 1280px) {
+  .mainCon1 .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .mainCon1 .inner .txBox {
   max-width: 420px;
   width: 100%;
@@ -308,6 +388,13 @@ button {
   margin: 0 auto;
 }
 
+@media (max-width: 1280px) {
+  .weAreInstagram .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .weAreInstagram .inner .title {
   margin-bottom: 50px;
   display: -webkit-box;
@@ -346,6 +433,13 @@ button {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+  .studios .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .studios .inner .title {
@@ -475,6 +569,13 @@ button {
   margin: 0 auto;
 }
 
+@media (max-width: 1280px) {
+  .relatedBrands {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .relatedBrands .title {
   margin-bottom: 50px;
   font-size: 40px;
@@ -556,6 +657,13 @@ button {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+  .tabWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .tabWrap .tab_header {
@@ -793,6 +901,13 @@ button {
   display: flex;
 }
 
+@media (max-width: 1280px) {
+  .cardWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .cardWrap .card {
   margin-right: 55px;
 }
@@ -840,6 +955,13 @@ button {
   margin: 0 auto;
 }
 
+@media (max-width: 1280px) {
+  .img_wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .img_wrap img {
   margin-bottom: 30px;
 }
@@ -852,6 +974,13 @@ button {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+  .enStyleLevel1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .enStyleLevel1 .title {
@@ -897,6 +1026,13 @@ button {
   width: 100%;
   margin: 0 auto;
   margin-top: 50px;
+}
+
+@media (max-width: 1280px) {
+  .table_3 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .table_3 .desc {
@@ -958,6 +1094,13 @@ button {
   margin: 0 auto;
 }
 
+@media (max-width: 1280px) {
+  .qna {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .qna .title {
   font-weight: 500;
   font-size: 30px;
@@ -1005,5 +1148,71 @@ button {
 
 .dropdown.on .down {
   display: block;
+}
+
+@media (max-width: 1280px) {
+  .header {
+    height: 70px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .header a {
+    color: #333;
+  }
+  .header .logo {
+    width: 100px;
+  }
+  .header .right {
+    height: 100vh;
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+  }
+  .header .right.on {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .right .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .right .menu a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
+    color: #333;
+  }
+  .header .right .loginJoin {
+    margin-top: 30px;
+    margin-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .menuOpen {
+    display: block;
+  }
+  .container {
+    margin-top: 70px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
