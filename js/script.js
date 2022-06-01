@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  scrollFn();
   AOS.init({
     duration: 1500,
   });
@@ -63,3 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+function scrollFn() {
+  $(window).scroll(function () {
+    let isScrollTop = $(window).scrollTop();
+
+    if (isScrollTop != 0 && isScrollTop > 0) {
+      $(".header").addClass("scrollDown");
+    }
+    if (isScrollTop === 0) {
+      $(".header").removeClass("scrollDown");
+    }
+    console.log(isScrollTop);
+  });
+}
