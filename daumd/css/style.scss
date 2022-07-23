@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+}
+button {
+  cursor: pointer;
+  border: 1px solid #333;
+  background: none;
+}
+input {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+  background: none;
+  border: 1px solid #333;
+}
+img {
+  vertical-align: top;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+.innerW {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  .top {
+    background-color: #f3f3f3;
+    font-size: 13px;
+    .innerW {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      a {
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.fava {
+          background-color: #a0d468;
+        }
+        &.insta {
+          background-color: #e9e9e9;
+        }
+      }
+      .date {
+        margin-left: 10px;
+      }
+    }
+    .right {
+      display: flex;
+      a {
+        margin-right: 10px;
+        padding-right: 10px;
+        position: relative;
+        color: #858585;
+        &::after {
+          content: "";
+          width: 1px;
+          height: 14px;
+          background-color: #cdcdcd;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+      }
+      .curren {
+        color: #858585;
+        .green {
+          color: #4c872b;
+        }
+        .red {
+          color: #ca0404;
+        }
+      }
+    }
+  }
+  .center {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .search {
+      position: relative;
+      input {
+        width: 376px;
+        height: 35px;
+        border: 1px solid #d1d1d1;
+      }
+      button {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border: none;
+      }
+    }
+    .right {
+      a {
+        margin-right: 10px;
+        padding: 4px 10px;
+        border: 1px solid #d1d1d1;
+        border-radius: 15px;
+        font-size: 15px;
+      }
+    }
+  }
+  .bottom {
+    background-image: url(../img/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .innerW {
+      padding: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    a {
+      margin-right: 40px;
+      font-size: 18px;
+      color: #fff;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
