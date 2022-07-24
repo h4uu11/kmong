@@ -10,17 +10,22 @@ a {
   display: inline-block;
 }
 button {
+  width: 100%;
   cursor: pointer;
   border: 1px solid #333;
   background: none;
 }
 input {
+  width: 100%;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #333;
   background: none;
   border: 1px solid #333;
+  &::placeholder {
+    color: #d4d4d4;
+  }
 }
 img {
   vertical-align: top;
@@ -34,7 +39,7 @@ body {
   word-break: keep-all;
 }
 .innerW {
-  width: 1200px;
+  width: 1250px;
   margin: 0 auto;
 }
 
@@ -160,8 +165,12 @@ body {
   margin-top: 30px;
   padding-bottom: 100px;
   display: flex;
-  .left {
+  & > .left {
     width: 890px;
+  }
+  & > .right {
+    width: calc(100% - 890px);
+    padding-left: 30px;
   }
 }
 .con2 {
@@ -339,6 +348,192 @@ body {
     .desc {
       padding: 20px 30px;
       font-size: 15px;
+    }
+  }
+}
+.con9 {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #a0d468;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+  .title {
+    margin-bottom: 15px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .form {
+    display: flex;
+    .le {
+      width: calc(100% - 86px);
+      margin-right: 6px;
+      .inWrap {
+        position: relative;
+        &:first-child {
+          margin-bottom: 3px;
+        }
+        img {
+          position: absolute;
+          left: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      input {
+        height: 35px;
+        padding-left: 30px;
+        padding-right: 10px;
+        border: 1px solid #7fb14a;
+        background-color: #fff;
+        font-size: 15px;
+      }
+    }
+    .ri {
+      width: 80px;
+      button {
+        height: 100%;
+        background-color: #457c27;
+        border: none;
+        color: #fff;
+        font-size: 15px;
+      }
+    }
+  }
+  .bo {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .radio {
+      display: flex;
+      align-items: center;
+      .text {
+        margin-left: 7px;
+      }
+    }
+    input[type="checkbox"] {
+      display: none;
+      & + label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &::before {
+          content: "";
+          width: 28px;
+          height: 15px;
+          background-color: #fff;
+          display: inline-block;
+          position: relative;
+          border-radius: 20px;
+        }
+        &::after {
+          content: "";
+          width: 8px;
+          height: 8px;
+          background-color: #a0d468;
+          position: absolute;
+          top: 50%;
+          left: 4px;
+          transform: translateY(-50%);
+          border-radius: 50%;
+        }
+      }
+      &:checked + label::after {
+        left: 16px;
+      }
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      .bullet {
+        width: 1px;
+        height: 10px;
+        margin: 0 8px;
+        background-color: #fff;
+      }
+    }
+  }
+}
+.con10 {
+  margin: 20px 0;
+  a {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.con11 {
+  font-size: 15px;
+  .board {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .title {
+    height: 50px;
+    padding: 0 20px;
+    background-color: #457c27;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      color: #fff;
+    }
+  }
+  .list {
+    padding: 0 20px;
+    border: 1px solid #d1d1d1;
+    .item {
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #d1d1d1;
+      &:last-child {
+        border-bottom: none;
+      }
+      .le {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        .bullet {
+          width: 7px;
+          height: 7px;
+          margin-right: 7px;
+          border-radius: 50%;
+          background-color: #c7c7c7;
+        }
+        .desc {
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .new {
+          width: 20px;
+          height: 20px;
+          background-color: #ffce08;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+      .date {
+        color: #858585;
+      }
     }
   }
 }
