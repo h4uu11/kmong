@@ -46,6 +46,7 @@ input::placeholder {
 }
 
 img {
+  max-width: 100%;
   vertical-align: top;
 }
 
@@ -59,7 +60,8 @@ body {
 }
 
 .innerW {
-  width: 1250px;
+  max-width: 1250px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -785,5 +787,108 @@ body {
 
 .con11 .list .item .date {
   color: #858585;
+}
+
+@media (max-width: 1250px) {
+  .container .left {
+    width: calc(100% - 360px);
+  }
+  .container .right {
+    width: 360px;
+  }
+  .con4 .item {
+    width: 48%;
+  }
+  .con5 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .con5 .board {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #d1d1d1;
+  }
+  .con5 .board:last-child {
+    border-bottom: none;
+  }
+  .con8 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .con8 .item + .item {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .top {
+    display: none;
+  }
+  .header .center {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .center .search {
+    margin: 30px 0;
+  }
+  .header .bottom {
+    display: none;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .left {
+    width: 100%;
+  }
+  .container .right {
+    width: 100%;
+    padding-left: 0;
+  }
+  .con2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .con2 a:first-child {
+    margin-bottom: 10px;
+  }
+  .con2 img {
+    width: 100%;
+  }
+  .con4 .item {
+    width: 100%;
+  }
+  .con7 .title {
+    font-size: 25px;
+  }
+  .con7 .desc {
+    font-size: 15px;
+  }
+  .con9 {
+    display: none;
+  }
+  .con10 a {
+    width: 100%;
+  }
+  .con10 img {
+    width: 100%;
+  }
+  .con12 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .con12 img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
